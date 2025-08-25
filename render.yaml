@@ -1,0 +1,29 @@
+services:
+  # Main gaming server
+  - type: web
+    name: central-gaming-hub
+    env: node
+    plan: free
+    rootDir: game-server
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: JWT_SECRET
+        generateValue: true
+      - key: ENCRYPTION_KEY
+        generateValue: true
+
+  # PostgreSQL database
+  - type: pserv
+    name: gaming-hub-db
+    env: postgresql
+    plan: free
+
+  # Redis cache
+  - type: redis
+    name: gaming-hub-cache
+    plan: free

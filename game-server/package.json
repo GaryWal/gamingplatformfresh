@@ -1,0 +1,24 @@
+{
+  "name": "central-gaming-hub",
+  "version": "1.0.0",
+  "description": "Central gaming platform for venue game distribution",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "build": "echo 'Build completed'"
+  },
+  "keywords": ["gaming", "venue", "distribution", "central", "hub"],
+  "author": "Central Gaming Hub",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.7.4",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "compression": "^1.7.4"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
